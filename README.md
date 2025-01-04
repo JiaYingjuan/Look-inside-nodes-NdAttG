@@ -7,6 +7,14 @@ This repository contains implementations of the NdAttG model in both TensorFlow 
 - **tensor_sample**: Contains executable code for reproducing the graph-prediction experiment.
 - **torch_sample**: Includes executable code for the link-prediction experiment and node-prediction experiments involving the OGB database.
 
+## Environment Setup
+ 
+Before running any experiments, make sure to set up your environment by installing all necessary dependencies. You can do this by running the following command:
+ 
+```bash
+pip install -r requirements.txt
+```
+
 ## Running Experiments
 
 ### Table 1(a) Data
