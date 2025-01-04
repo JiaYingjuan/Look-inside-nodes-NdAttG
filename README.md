@@ -64,56 +64,21 @@ The benchmark databases used include:
 
 ## References
 
-[@GCN]:
-```
-T. N. Kipf, M. Welling, Semi-supervised classification with graph convolutional networks (2017). arXiv:1609.02907,
-doi:https://arxiv.org/abs/1609.02907.
-```
+[@GCN](https://arxiv.org/abs/1609.02907): T. N. Kipf, M. Welling, Semi-supervised classification with graph convolutional networks (2017). arXiv:1609.02907.
 
-[@GraphSAGE]:
-```
-W. Hamilton, Z. Ying, J. Leskovec, Inductive representation learning on large graphs, in: I. Guyon, U. V. Luxburg, S. Bengio, H. Wallach, R. Fergus, S. Vishwanathan, R. Garnett (Eds.), Advances in Neural Information Processing Systems, Vol. 30, Curran Associates, Inc., 2017.
-URL https://proceedings.neurips.cc/paper_files/paper/2017/file/5dd9db5e033da9c6fb5ba83c7a7ebea9-Paper.pdf
-```
+[@GraphSAGE](https://proceedings.neurips.cc/paper_files/paper/2017/file/5dd9db5e033da9c6fb5ba83c7a7ebea9-Paper.pdf): W. Hamilton, Z. Ying, J. Leskovec, Inductive representation learning on large graphs, in: I. Guyon, U. V. Luxburg, S. Bengio, H. Wallach, R. Fergus, S. Vishwanathan, R. Garnett (Eds.), Advances in Neural Information Processing Systems, Vol. 30, Curran Associates, Inc., 2017.
 
-[@GAT]:
-```
-P. Veličković, G. Cucurull, A. Casanova, A. Romero, P. Liò, Y. Bengio, Graph attention networks (2018).
-URL https://openreview.net/forum?id=rJXMpikCZ
-```
+[@GAT](https://openreview.net/forum?id=rJXMpikCZ): P. Veličković, G. Cucurull, A. Casanova, A. Romero, P. Liò, Y. Bengio, Graph attention networks (2018).
 
-[@GATv2]:
-```
-S. Brody, U. Alon, E. Yahav, How attentive are graph attention networks?, in: International Conference on Learning Representations, 2022.
-URL https://openreview.net/forum?id=F72ximsx7C1
-```
+[@GATv2](https://openreview.net/forum?id=F72ximsx7C1): S. Brody, U. Alon, E. Yahav, How attentive are graph attention networks?, in: International Conference on Learning Representations, 2022.
 
-[@GIN]:
-```
-K. Xu,W. Hu, J. Leskovec, S. Jegelka, How powerful are graph neural networks? (2019). arXiv:1810.00826.
-URL https://arxiv.org/abs/1810.00826
-```
+[@GIN](https://arxiv.org/abs/1810.00826): K. Xu,W. Hu, J. Leskovec, S. Jegelka, How powerful are graph neural networks? (2019). arXiv:1810.00826.
 
-[@ogb]:
-```
-W. Hu, M. Fey, M. Zitnik, Y. Dong, H. Ren, B. Liu, M. Catasta, J. Leskovec, Open graph benchmark: Datasets for machine learning on graphs, in: H. Larochelle, M. Ranzato, R. Hadsell, M. Balcan, H. Lin (Eds.), Advances in Neural Information Processing Systems, Vol. 33, Curran Associates, Inc., 2020, pp. 22118–22133.
-URL https://proceedings.neurips.cc/paper_files/paper/2020/file/fb60d411a5c5b72b2e7d3527cfc84fd0-Paper.pdf
-```
+[@ogb](https://proceedings.neurips.cc/paper_files/paper/2020/file/fb60d411a5c5b72b2e7d3527cfc84fd0-Paper.pdf): W. Hu, M. Fey, M. Zitnik, Y. Dong, H. Ren, B. Liu, M. Catasta, J. Leskovec, Open graph benchmark: Datasets for machine learning on graphs, in: H. Larochelle, M. Ranzato, R. Hadsell, M. Balcan, H. Lin (Eds.), Advances in Neural Information Processing Systems, Vol. 33, Curran Associates, Inc., 2020, pp. 22118–22133.
 
-[@QM9]:
-```
-M. Brockschmidt, GNN-FiLM: Graph neural networks with feature-wise linear modulation, in: H. D. III, A. Singh (Eds.), Proceedings of the 37th International Conference on Machine Learning, Vol. 119 of Proceedings of Machine Learning Research, PMLR, 2020, pp. 1144–1152.
-URL https://proceedings.mlr.press/v119/brockschmidt20a.html
-```
+[@QM9](https://proceedings.mlr.press/v119/brockschmidt20a.html): M. Brockschmidt, GNN-FiLM: Graph neural networks with feature-wise linear modulation, in: H. D. III, A. Singh (Eds.), Proceedings of the 37th International Conference on Machine Learning, Vol. 119 of Proceedings of Machine Learning Research, PMLR, 2020, pp. 1144–1152.
 
-[@PPI]:
-```
-M. Zitnik, J. Leskovec, Predicting multicellular function through multi-layer tissue networks, Bioinformatics 33 (14) (2017) i190–i198.
-doi:https://doi.org/10.1093/bioinformatics/btx252.
-```
+[@PPI](https://doi.org/10.1093/bioinformatics/btx252): M. Zitnik, J. Leskovec, Predicting multicellular function through multi-layer tissue networks, Bioinformatics 33 (14) (2017) i190–i198.
 
-[@citation-networks]:
-```
-P. Sen, G. Namata, M. Bilgic, L. Getoor, B. Galligher, T. Eliassi-Rad, Collective classification in network data, AI magazine 29 (3) (2008) 93–93.
-doi:https://doi.org/10.1609/aimag.v29i3.2157.
-```
+[@citation-networks](https://doi.org/10.1609/aimag.v29i3.2157): P. Sen, G. Namata, M. Bilgic, L. Getoor, B. Galligher, T. Eliassi-Rad, Collective classification in network data, AI magazine 29 (3) (2008) 93–93.
+
