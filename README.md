@@ -79,5 +79,4 @@ This implementation includes the following backbone models:
 
 - [KAAGAT] Fang, T., Gao, T., Wang, C., Shang, Y., Chow, W., Chen, L., & Yang, Y. (2025). KAA: Kolmogorov-Arnold attention for enhancing attentive graph neural networks. In International Conference on Learning Representations.
 
-- [OGB] Hu, W., Fey, M., Zitnik, M., Dong, Y., Ren, H., Liu, B., ... & Leskovec, J. (2020). Open graph benchmark: Datasets for machine learning on graphs. In Advances in Neural Information Processing Systems (pp. 22118-22133).
 
