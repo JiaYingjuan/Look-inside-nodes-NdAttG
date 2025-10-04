@@ -1,84 +1,84 @@
-# NdAttG Code Repository
+```markdown
+# Look Inside Nodes: A Novel Intranode Attention Mechanism for Graph Attention Networks
 
-This repository contains implementations of the NdAttG model in both TensorFlow and PyTorch. It includes executable code for reproducing experiments in graph prediction, link prediction, and node prediction tasks.
+This repository contains the **PyTorch implementation** of the paper:  
+**"Look Inside Nodes: A Novel Intranode Attention Mechanism for Graph Attention Networks"**.  
 
-## Folder Structure
+It includes executable code for reproducing experiments in **node prediction**, **link prediction**, and **graph prediction** tasks.
 
-- **tensor_sample**: Contains executable code for reproducing the graph-prediction experiment.
-- **torch_sample**: Includes executable code for the link-prediction experiment and node-prediction experiments involving the OGB database.
+---
 
-## Environment Setup
- 
-Before running any experiments, make sure to set up your environment by installing all necessary dependencies. You can do this by running the following command:
- 
+## 🧩 Environment Setup
+
+Before running any experiments, make sure to set up your environment by installing all necessary dependencies:
+
 ```bash
-pip install -r requirements.txt
+pip install torch==2.4.0 torch_geometric==2.5.3 ogb==1.3.6 numpy==1.26.3 pandas==2.2.2
 ```
 
 ## Running Experiments
 
-### Table 1(a) Data
-To obtain the data for Table 1(a), run the following bash script:
+### Table 5 Results
+
+To reproduce the results from Table 5 (node, link, and graph-level tasks), run the corresponding bash scripts:
+
 ```bash
-bash run_collab.sh
+# For node-level tasks
+bash run_node.sh
+
+# For link-level tasks  
+bash run_link.sh
+
+# For graph-level tasks
+bash run_zinc.sh
 ```
 
-### Table 1(b) Data
-To obtain the data for Table 1(b), run the following bash script:
-```bash
-bash run_citation2.sh
+### Tables 2-4 Results
+
+To reproduce the results from Tables 2-4, transplant the INAT mechanism into the code from:
+
+```
+https://github.com/tech-srl/how_attentive_are_gats
 ```
 
-### Table 2(a) Data
-To obtain the data for Table 2(a), replace `database_name` with the appropriate database name and run the following bash script:
-```bash
-bash run_database_name.sh
+## Project Structure
+
+```
+├── model/              # Backbone model implementations
+├── graph_regression/   # Graph-level task
+├── link_prediction/    # Link-level task
+├── node_classification/  # Node-level task
+├── dataset/            # Dataset storage directory  
+├── run_node.sh         # Node-level task scripts
+├── run_link.sh         # Link-level task scripts
+├── run_zinc.sh         # Graph-level task scripts
+└── ...
 ```
 
-### Table 3 Data
-To obtain the data for Table 3, run the following Python script. The hyperparameters can be modified in the `default_hypers` folder located at `tensor_sample/tasks/`:
-```bash
-python run_qm9_benchs.py
-```
+## Backbone Models
 
-### Noise Experiment (Figure 6)
-To reproduce Figure 6 from the noise experiment, run the following bash script:
-```bash
-bash run_noise.sh
-```
+This implementation includes the following backbone models:
 
-### Additional Experiments
-The code for experiments not mentioned here will be supplemented upon publication of the paper.
-
-## Baseline Models
-
-The tasks performed by the models include the widely used convolution-based GCN [@GCN], GraphSAGE [@GraphSAGE], and GIN [@GIN], as well as the attention-based GAT [@GAT] and GATv2 [@GATv2].
-
-## Benchmark Databases
-
-The benchmark databases used include:
-
-- **ogbl-collab** [@ogb] and **ogbl-citation2** [@ogb] for link-prediction tasks.
-- **Citation-Networks (Citeseer, Cora, and PubMed)** [@citation-networks], **PPI** [@PPI], **ogbn-arxiv**, **ogbn-mag**, **ogbn-products**, and **ogbn-proteins** [@ogb] for node-prediction tasks.
-- **QM9** [@QM9] for graph-prediction tasks.
+- **GAT** - Graph Attention Networks  
+- **GATv2** - Improved graph attention mechanism
+- **GLCN** - Graph Learning-Convolutional Networks
+- **CFGAT** - Coarse-to-Fine Graph Attention Network
+- **KAAGAT** - Kolmogorov-Arnold Attention for GATs
+- **HLGAT** - High-frequency and Low-frequency dual-channel GAT
 
 ## References
 
-[@GCN](https://arxiv.org/abs/1609.02907): T. N. Kipf, M. Welling, Semi-supervised classification with graph convolutional networks (2017). arXiv:1609.02907.
+- [GAT] Veličković, P., Cucurull, G., Casanova, A., Romero, A., Liò, P., & Bengio, Y. (2018). Graph attention networks. In International Conference on Learning Representations.
 
-[@GraphSAGE](https://proceedings.neurips.cc/paper_files/paper/2017/file/5dd9db5e033da9c6fb5ba83c7a7ebea9-Paper.pdf): W. Hamilton, Z. Ying, J. Leskovec, Inductive representation learning on large graphs, in: I. Guyon, U. V. Luxburg, S. Bengio, H. Wallach, R. Fergus, S. Vishwanathan, R. Garnett (Eds.), Advances in Neural Information Processing Systems, Vol. 30, Curran Associates, Inc., 2017.
+- [GATv2] Brody, S., Alon, U., & Yahav, E. (2022). How attentive are graph attention networks?. In International Conference on Learning Representations.
 
-[@GAT](https://openreview.net/forum?id=rJXMpikCZ): P. Veličković, G. Cucurull, A. Casanova, A. Romero, P. Liò, Y. Bengio, Graph attention networks (2018).
+- [GLCN] Jiang, B., Zhang, Z., Lin, D., Tang, J., & Luo, B. (2019). Semi-supervised learning with graph learning-convolutional networks. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition (pp. 11313-11320).
 
-[@GATv2](https://openreview.net/forum?id=F72ximsx7C1): S. Brody, U. Alon, E. Yahav, How attentive are graph attention networks?, in: International Conference on Learning Representations, 2022.
+- [CFGAT] Cui, D., Jin, F., Li, R. H., & Wang, G. (2020). CFGAT: A coarse-to-fine graph attention network for semi-supervised node classification. In 2020 IEEE 32nd International Conference on Tools with Artificial Intelligence (ICTAI) (pp. 1020-1027). IEEE.
 
-[@GIN](https://arxiv.org/abs/1810.00826): K. Xu,W. Hu, J. Leskovec, S. Jegelka, How powerful are graph neural networks? (2019). arXiv:1810.00826.
+- [HLGAT] Sun, Y., Duan, Y., Ma, H., Li, Y., & Wang, J. (2024). High-frequency and low-frequency dual-channel graph attention network. Pattern Recognition, 156, 110795.
 
-[@ogb](https://proceedings.neurips.cc/paper_files/paper/2020/file/fb60d411a5c5b72b2e7d3527cfc84fd0-Paper.pdf): W. Hu, M. Fey, M. Zitnik, Y. Dong, H. Ren, B. Liu, M. Catasta, J. Leskovec, Open graph benchmark: Datasets for machine learning on graphs, in: H. Larochelle, M. Ranzato, R. Hadsell, M. Balcan, H. Lin (Eds.), Advances in Neural Information Processing Systems, Vol. 33, Curran Associates, Inc., 2020, pp. 22118–22133.
+- [KAAGAT] Fang, T., Gao, T., Wang, C., Shang, Y., Chow, W., Chen, L., & Yang, Y. (2025). KAA: Kolmogorov-Arnold attention for enhancing attentive graph neural networks. In International Conference on Learning Representations.
 
-[@QM9](https://proceedings.mlr.press/v119/brockschmidt20a.html): M. Brockschmidt, GNN-FiLM: Graph neural networks with feature-wise linear modulation, in: H. D. III, A. Singh (Eds.), Proceedings of the 37th International Conference on Machine Learning, Vol. 119 of Proceedings of Machine Learning Research, PMLR, 2020, pp. 1144–1152.
-
-[@PPI](https://doi.org/10.1093/bioinformatics/btx252): M. Zitnik, J. Leskovec, Predicting multicellular function through multi-layer tissue networks, Bioinformatics 33 (14) (2017) i190–i198.
-
-[@citation-networks](https://doi.org/10.1609/aimag.v29i3.2157): P. Sen, G. Namata, M. Bilgic, L. Getoor, B. Galligher, T. Eliassi-Rad, Collective classification in network data, AI magazine 29 (3) (2008) 93–93.
-
+- [OGB] Hu, W., Fey, M., Zitnik, M., Dong, Y., Ren, H., Liu, B., ... & Leskovec, J. (2020). Open graph benchmark: Datasets for machine learning on graphs. In Advances in Neural Information Processing Systems (pp. 22118-22133).
+```
